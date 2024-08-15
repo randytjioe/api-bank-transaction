@@ -7,7 +7,7 @@ Nasabah Management System adalah aplikasi backend yang mengelola data nasabah, r
 ## Features
 - **Manajemen Nasabah**: CRUD untuk data nasabah.
 - **Manajemen Rekening**: CRUD untuk rekening terkait nasabah.
-- **Manajemen Transaksi**: Menyimpan, mengupdate, dan mengambil data transaksi.
+- **Manajemen Transaksi**: Menyimpan, dan mengambil data transaksi.
 - **Pagination**: Mendukung pagination untuk mengambil data transaksi.
 
 ## Technologies Used
