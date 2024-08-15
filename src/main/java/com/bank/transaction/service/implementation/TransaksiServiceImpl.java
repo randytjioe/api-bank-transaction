@@ -86,9 +86,7 @@ public class TransaksiServiceImpl implements TransaksiService {
         var userEmail = jwtService.extractClaim(jwt, Claims::getSubject);
         Nasabah userDetails = userRepository.findByEmail(userEmail).orElseThrow(() -> new RuntimeException("User not found"));
         Transaksi transaksiDetails = transaksiRepository.findById(id);
-        if (userDetails.getNasabahId() != transaksiDetails.getRekening().getNasabah().getNasabahId() ) {
-            throw new RuntimeException("Unauthorized access");
-        }
+
         return transaksiRepository.findById(id);
     }
     @Override
@@ -102,10 +100,6 @@ public class TransaksiServiceImpl implements TransaksiService {
         var userEmail = jwtService.extractClaim(jwt, Claims::getSubject);
         Nasabah userDetails = userRepository.findByEmail(userEmail).orElseThrow(() -> new RuntimeException("User not found"));
         Rekening rekeningDetails = rekeningRepository.findById(rekeningId);
-        if (userDetails.getNasabahId() != rekeningDetails.getNasabah().getNasabahId() ) {
-            throw new RuntimeException("Unauthorized access");
-        }
-
         List<Transaksi> transaksi = transaksiRepository.findByRekeningId(rekeningId, pageable.getPageSize(), pageable.getPageSize()*(pageable.getPageNumber()));
         int total = transaksi.size();
         return new PageImpl<>(transaksi, pageable, total);
