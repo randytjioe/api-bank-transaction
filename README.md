@@ -12,7 +12,7 @@ Nasabah Management System adalah aplikasi backend yang mengelola data nasabah, r
 
 ## Technologies Used
 - **Java 17**
-- **Spring Boot **
+- **Spring Boot**
 - **JDBC**
 - **Postgresql (Database)**
 - **Maven (Build Tool)**
@@ -21,15 +21,15 @@ Nasabah Management System adalah aplikasi backend yang mengelola data nasabah, r
 
 ### Prerequisites
 - **Java 17**
-- **MySQL** - Ensure MySQL is installed and running.
+- **Postgresql** - Ensure MySQL is installed and running.
 - **Maven** - For build and dependency management.
 
 ### Installation
 
 1. **Clone the Repository**
    ```
-   git clone https://github.com/username/nasabah-management.git
-   cd nasabah-management
+   git clone git@github.com:randytjioe/api-bank-transaction.git
+   cd api-bank-transaction
     ```
 2. Setup Database
    Buat database baru di Postgresql:
